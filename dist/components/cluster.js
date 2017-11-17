@@ -43,6 +43,10 @@ var props = {
     type: Number,
     twoWay: false
   },
+  minimumClusterSize: {
+    type: Number,
+    twoWay: false
+  },
   styles: {
     type: Array,
     twoWay: false
