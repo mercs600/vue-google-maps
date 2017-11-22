@@ -1,2 +1,2 @@
-module.exports = require('marker-clusterer-plus')
+// module.exports = require('marker-clusterer-plus')
 

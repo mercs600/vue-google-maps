@@ -1,3 +1,2 @@
-'use strict';
-
-module.exports = require('marker-clusterer-plus');
+// module.exports = require('marker-clusterer-plus')
+"use strict";
