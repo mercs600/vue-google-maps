@@ -69,7 +69,7 @@ var props = {
   }
 };
 
-var events = ['click', 'dblclick', 'drag', 'dragend', 'dragstart', 'idle', 'mousemove', 'mouseout', 'mouseover', 'resize', 'rightclick', 'tilesloaded'];
+var events = ['click', 'dblclick', 'drag', 'dragend', 'dragstart', 'idle', 'mousemove', 'mouseout', 'mouseover', 'resize', 'rightclick', 'tilesloaded', ''];
 
 // Plain Google Maps methods exposed here for convenience
 var linkedMethods = ['panBy', 'panTo', 'panToBounds', 'fitBounds'].reduce(function (all, methodName) {
@@ -168,6 +168,9 @@ exports.default = {
       // manually trigger center and zoom
       _this2.$mapObject.addListener('center_changed', function () {
         _this2.$emit('center_changed', _this2.$mapObject.getCenter());
+      });
+      _this2.$mapObject.addListener('clusterclick', function (cluster) {
+        _this2.$emit('cluster_click', cluster);
       });
       _this2.$mapObject.addListener('zoom_changed', function () {
         _this2.$emit('zoom_changed', _this2.$mapObject.getZoom());

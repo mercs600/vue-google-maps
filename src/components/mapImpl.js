@@ -53,6 +53,7 @@ const events = [
   'resize',
   'rightclick',
   'tilesloaded',
+  ''
 ];
 
 // Plain Google Maps methods exposed here for convenience
@@ -155,6 +156,9 @@ export default {
       // manually trigger center and zoom
       this.$mapObject.addListener('center_changed', () => {
         this.$emit('center_changed', this.$mapObject.getCenter());
+      });
+      this.$mapObject.addListener('clusterclick', (cluster) => {
+        this.$emit('cluster_click', cluster);
       });
       this.$mapObject.addListener('zoom_changed', () => {
         this.$emit('zoom_changed', this.$mapObject.getZoom());
